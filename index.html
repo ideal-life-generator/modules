@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Angular modules</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-mocks.js"></script>
+  <script src="application/modules/authentification/AuthentificationModule.js"></script>
+  <script src="application/modules/super-history/SuperHistoryModule.js"></script>
+  <script src="application/application.js"></script>
+</head>
+<body ng-app="Modules"
+      ng-controller="MainController">
+
+  <!-- <pre>{{ User | json }}</pre> -->
+
+  <logout callback="clearData()"></logout>
+
+  <section class="ng-view"></section>
+
+</body>
+</html>

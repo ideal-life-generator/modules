@@ -1,0 +1,14 @@
+{
+  "name": "Modules",
+  "version": "0.0.1",
+  "devDependencies": {
+    "body-parser": "^1.10.2",
+    "express": "^4.10.6",
+    "grunt": "*",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.19",
+    "grunt-shell-spawn": "^0.3.0"
+  }
+}
