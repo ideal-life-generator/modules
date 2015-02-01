@@ -2,7 +2,7 @@ Authentification = angular.module "Authentification", [ ]
 
 Authentification.directive "authentification", [
   "$rootScope", "$http"
-  , ($rootScope, $http) ->
+  ($rootScope, $http) ->
 
     restrict: "E"
     replace: on
@@ -42,7 +42,7 @@ Authentification.directive "authentification", [
 
 Authentification.directive "logout", [
   "$rootScope", "$http"
-  , ($rootScope, $http) ->
+  ($rootScope, $http) ->
 
     restrict: "E"
     replace: on

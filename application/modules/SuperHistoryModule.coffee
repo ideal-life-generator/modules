@@ -9,7 +9,7 @@ SuperHistory.provider "SuperHistory", ->
 
   $get: [
     "$rootScope", "$location"
-    , ($rootScope, $location) ->
+    ($rootScope, $location) ->
 
       class SuperHistory
         constructor: ->

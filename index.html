@@ -4,14 +4,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-mocks.js"></script>
-  <script src="application/modules/authentification/AuthentificationModule.js"></script>
-  <script src="application/modules/super-history/SuperHistoryModule.js"></script>
+  <script src="application/modules/AuthentificationModule.js"></script>
+  <script src="application/modules/SuperHistoryModule.js"></script>
+  <script src="application/modules/IndexDBModule.js"></script>
+  <script src="application/modules/CacheModule.js"></script>
   <script src="application/application.js"></script>
 </head>
 <body ng-app="Modules"
       ng-controller="MainController">
 
   <!-- <pre>{{ User | json }}</pre> -->
+
+  <pre>{{ $root.applicationStatus }}</pre>
 
   <logout callback="clearData()"></logout>
 

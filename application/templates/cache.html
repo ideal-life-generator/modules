@@ -1,0 +1,26 @@
+<h1>Cache</h1>
+
+<ul>
+  <li style="margin: 10px;"
+      ng-repeat="car in cars">
+    <p style="margin: 3px;">
+      {{ car.descriptor }}
+    </p>
+    <p style="margin: 3px;">
+      {{ car.price }}
+    </p>
+    <button ng-click="remove($index)">Remove</button>
+  </li>
+  <br>
+  <li>
+    <p>
+      descriptor <input type="text">
+    </p>
+    <p>
+      price <input type="text">
+    </p>
+    <button>Add</button>
+  </li>
+</ul>
+
+<pre style="position: absolute; right: 0; top: 0;">{{ cars | json }}</pre>

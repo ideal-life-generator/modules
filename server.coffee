@@ -28,11 +28,67 @@ app.use "/authorization", (req, res) ->
       .status 404
       .send content: "Don't find user"
 
-app.use "/title", (req, res) ->
-  res.send content: "Cache module"
+cars = [
+    id: 0
+    descriptor: "BMW"
+    price: "19000"
+  ,
+    id: 1
+    descriptor: "Mazda"
+    price: "13000"
+  ,
+    id: 2
+    descriptor: "Mercedes"
+    price: "30000"
+]
+
+app.use "/cars/:id", (req, res) ->
+  success = off
+  cars.forEach (car) ->
+    success = on if ~~req.params.id is car.id
+  if success
+    res.send cars[req.params.id]
+  else
+    res
+      .status 404
+      .send content: "No data"
   # res
   #   .status 404
   #   .send content: "No data"
+
+app.delete "/cars/:id", (req, res) ->
+  res.send()
+
+app.get "/cars", (req, res) ->
+  # setTimeout ->
+  #   res.send cars
+  # , 1600
+  setTimeout ->
+    res
+      .status 404
+      .send content: "No data"
+  , 1600
+
+count = 0
+app.use "/data1", (req, res) ->
+  setTimeout ->
+    res.send [ count++ ]
+  , 600 / count
+  # setTimeout ->
+  #   res
+  #     .status 404
+  #     .send content: "No data"
+  # , 600
+
+app.use "/data2", (req, res) ->
+  setTimeout ->
+    res.send [ "Dnepr", "Done", "Nil" ]
+  , 900
+  # setTimeout ->
+  #   res
+  #     .status 404
+  #     .send content: "No data"
+  # , 900
 
 app.use "/textarea", (req, res) ->
   res.send content: "Third content"
